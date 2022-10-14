@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Karachi',
 
     /*
     |--------------------------------------------------------------------------
@@ -181,7 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Illuminate\Notifications\NotificationServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -210,6 +210,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
-    ])->toArray(),
+        Illuminate\Notifications\NotificationServiceProvider::class,
+
+        ])->toArray(),
 
 ];

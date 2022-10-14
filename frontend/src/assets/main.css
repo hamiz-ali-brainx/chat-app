@@ -1,35 +1,53 @@
-@import "./base.css";
+/* Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins,sans-serif!important;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+}
+#intro{
+    min-width: 50%;
+    width: 20em;
+}
+.registration {
+    height: 100vh;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+
+#intro h2, #intro h6{
+    font-weight: bold;
+    line-height: 1.5;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+
+.register-form{
+    margin-top: 17em;
+    padding-left: 2em;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.login-form{
+    margin-top: 21em;
+    padding-left: 2em;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+@media screen and  ( max-width: 991px){
+    .register-form, .login-form {
+        margin-top: 5em!important;
+        margin-bottom: 2em!important;
+        padding-left: 0;
+    }
+    .registration {
+        height: 40vh;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .auth-form {
+        width: 80%;
+    }
+    #intro-col{
+        display: none;
+    }
 }
